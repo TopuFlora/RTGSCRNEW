@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="FloraSoft.CR.SiteMaster" %>
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1170">
+    <title><%: Page.Title %> - FLORA CHARGE MODULE</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="Content/font-awesome/font-awesome.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <script src="Scripts/modernizr-2.6.2.js" type="text/javascript"></script>
+    <script src="Scripts/html5.js" type="text/javascript"></script>
+    <script src="Scripts/respond.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="Scripts/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body class="ie ie8">
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            
+        </asp:ScriptManager>
+        <div class="container no-padding  bottom-single-line min-height-40">
+            <div class="row xs-text-center">
+                <div class="col-md-3">
+                    <a href="Default.aspx">
+                        <img alt="hsbc-logo" src="Images/hsbc-logo.gif" />
+                    </a>
+                </div>
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <%--<img alt="hsbc-apps-name" class="img-responsive" src="Images/name-apps-pay.png" />--%>
+                            <h4><font color="red"><b>FLORA</b></font> RTGS Charge Module</h4>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="pull-right">                               
+                                <ul class="list-inline">
+                                     <li><span><asp:Label ID="WelcomeMsg" runat="server"></asp:Label> </span></li> 
+                                    <li><asp:Button ID="btnLogOut" runat="server" class="btn btn-xs btn-danger" Text="Logout" OnClick="btnLogOut_Click" /></li>                                   
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="navbar">
+            <div class="container no-padding">
+                <div class="navbar-header">                   
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>                   
+                </div>
+                <div class="navbar-collapse collapse navbar-inverse">
+                    <ul class="nav navbar-nav">
+                          <li><a class="selected"  runat="server" href="~/CR/Default.aspx">Home</a></li>
+                      <%--  <li><a id="menuItemBulkt" runat="server" href="~/CR/BBCharge.aspx">Bangladesh Bank Tariff</a></li>--%>
+                        <li><a id="menuItemPositivePay" runat="server" href="~/CR/StandardCharge.aspx">Standard Charge</a></li>
+                        <li><a id="menuItemBulkPositivePay" runat="server" href="~/CR/SpecialCharge.aspx">Special Charge</a></li>
+
+                        
+                              <li><a id="A1" runat="server" href="~/CR/GenerateFlatFile.aspx">Flat File</a></li>
+                        <li><a id="test34" runat="server" href="~/CR/FileUpload.aspx">Upload Hub Response</a></li>
+                                <li><a id="A2" runat="server" href="~/CR/Search.aspx">Search</a></li> 
+                                
+                    </ul>                    
+                </div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>                      
+        </div>
+<%--        <div class="container">            
+            <footer>
+                <p>Powered by - <a target="_blank" href="http://www.floralimited.com">Flora Limited, 2020</a></p>
+            </footer>
+        </div>--%>
+    </form>
+</body>
+</html>

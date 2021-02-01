@@ -1,0 +1,6 @@
+D:\CRNew\CRNew\obj\Debug\ResolveAssemblyReference.cache
+D:\CRNew\CRNew\bin\CRNew.dll
+D:\CRNew\CRNew\bin\CRNew.pdb
+D:\CRNew\CRNew\bin\itextsharp.dll
+D:\CRNew\CRNew\obj\Debug\CRNew.dll
+D:\CRNew\CRNew\obj\Debug\CRNew.pdb

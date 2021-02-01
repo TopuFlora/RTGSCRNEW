@@ -1,0 +1,12 @@
+D:\CRNew\CRNew\bin\CRNew.dll
+D:\CRNew\CRNew\bin\CRNew.pdb
+D:\CRNew\CRNew\bin\itextsharp.dll
+D:\CRNew\CRNew\obj\Debug\ResolveAssemblyReference.cache
+D:\CRNew\CRNew\obj\Debug\CRNew.dll
+D:\CRNew\CRNew\obj\Debug\CRNew.pdb
+F:\Projects\RTGS\HSBC\CRNew\CRNew\bin\CRNew.dll.config
+F:\Projects\RTGS\HSBC\CRNew\CRNew\bin\CRNew.dll
+F:\Projects\RTGS\HSBC\CRNew\CRNew\bin\CRNew.pdb
+F:\Projects\RTGS\HSBC\CRNew\CRNew\bin\ClosedXML.dll
+F:\Projects\RTGS\HSBC\CRNew\CRNew\obj\Debug\CRNew.dll
+F:\Projects\RTGS\HSBC\CRNew\CRNew\obj\Debug\CRNew.pdb

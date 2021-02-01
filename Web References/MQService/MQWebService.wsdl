@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetHUBData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="acno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHUBDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHUBDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSignature">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="acno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSignatureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSignatureResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="acno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flag" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResponseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResponseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestResponseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestResponseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetHUBDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHUBData" />
+  </wsdl:message>
+  <wsdl:message name="GetHUBDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHUBDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSignatureSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSignature" />
+  </wsdl:message>
+  <wsdl:message name="GetSignatureSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSignatureResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResponseSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResponseSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestResponseSoapIn">
+    <wsdl:part name="parameters" element="tns:TestResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestResponseSoapOut">
+    <wsdl:part name="parameters" element="tns:TestResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHUBDataHttpGetIn">
+    <wsdl:part name="acno" type="s:string" />
+    <wsdl:part name="userID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHUBDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSignatureHttpGetIn">
+    <wsdl:part name="acno" type="s:string" />
+    <wsdl:part name="userID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSignatureHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetResponseHttpGetIn">
+    <wsdl:part name="acno" type="s:string" />
+    <wsdl:part name="userID" type="s:string" />
+    <wsdl:part name="flag" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetResponseHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TestResponseHttpGetIn" />
+  <wsdl:message name="TestResponseHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHUBDataHttpPostIn">
+    <wsdl:part name="acno" type="s:string" />
+    <wsdl:part name="userID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHUBDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSignatureHttpPostIn">
+    <wsdl:part name="acno" type="s:string" />
+    <wsdl:part name="userID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSignatureHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetResponseHttpPostIn">
+    <wsdl:part name="acno" type="s:string" />
+    <wsdl:part name="userID" type="s:string" />
+    <wsdl:part name="flag" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetResponseHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TestResponseHttpPostIn" />
+  <wsdl:message name="TestResponseHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="MQWebServiceSoap">
+    <wsdl:operation name="GetHUBData">
+      <wsdl:input message="tns:GetHUBDataSoapIn" />
+      <wsdl:output message="tns:GetHUBDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSignature">
+      <wsdl:input message="tns:GetSignatureSoapIn" />
+      <wsdl:output message="tns:GetSignatureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResponse">
+      <wsdl:input message="tns:GetResponseSoapIn" />
+      <wsdl:output message="tns:GetResponseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestResponse">
+      <wsdl:input message="tns:TestResponseSoapIn" />
+      <wsdl:output message="tns:TestResponseSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MQWebServiceHttpGet">
+    <wsdl:operation name="GetHUBData">
+      <wsdl:input message="tns:GetHUBDataHttpGetIn" />
+      <wsdl:output message="tns:GetHUBDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSignature">
+      <wsdl:input message="tns:GetSignatureHttpGetIn" />
+      <wsdl:output message="tns:GetSignatureHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResponse">
+      <wsdl:input message="tns:GetResponseHttpGetIn" />
+      <wsdl:output message="tns:GetResponseHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestResponse">
+      <wsdl:input message="tns:TestResponseHttpGetIn" />
+      <wsdl:output message="tns:TestResponseHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MQWebServiceHttpPost">
+    <wsdl:operation name="GetHUBData">
+      <wsdl:input message="tns:GetHUBDataHttpPostIn" />
+      <wsdl:output message="tns:GetHUBDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSignature">
+      <wsdl:input message="tns:GetSignatureHttpPostIn" />
+      <wsdl:output message="tns:GetSignatureHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResponse">
+      <wsdl:input message="tns:GetResponseHttpPostIn" />
+      <wsdl:output message="tns:GetResponseHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestResponse">
+      <wsdl:input message="tns:TestResponseHttpPostIn" />
+      <wsdl:output message="tns:TestResponseHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MQWebServiceSoap" type="tns:MQWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetHUBData">
+      <soap:operation soapAction="http://tempuri.org/GetHUBData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSignature">
+      <soap:operation soapAction="http://tempuri.org/GetSignature" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResponse">
+      <soap:operation soapAction="http://tempuri.org/GetResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestResponse">
+      <soap:operation soapAction="http://tempuri.org/TestResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MQWebServiceSoap12" type="tns:MQWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetHUBData">
+      <soap12:operation soapAction="http://tempuri.org/GetHUBData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSignature">
+      <soap12:operation soapAction="http://tempuri.org/GetSignature" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResponse">
+      <soap12:operation soapAction="http://tempuri.org/GetResponse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestResponse">
+      <soap12:operation soapAction="http://tempuri.org/TestResponse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MQWebServiceHttpGet" type="tns:MQWebServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetHUBData">
+      <http:operation location="/GetHUBData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSignature">
+      <http:operation location="/GetSignature" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResponse">
+      <http:operation location="/GetResponse" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestResponse">
+      <http:operation location="/TestResponse" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MQWebServiceHttpPost" type="tns:MQWebServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetHUBData">
+      <http:operation location="/GetHUBData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSignature">
+      <http:operation location="/GetSignature" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResponse">
+      <http:operation location="/GetResponse" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestResponse">
+      <http:operation location="/TestResponse" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MQWebService">
+    <wsdl:port name="MQWebServiceSoap" binding="tns:MQWebServiceSoap">
+      <soap:address location="http://localhost/MQService/MQWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MQWebServiceSoap12" binding="tns:MQWebServiceSoap12">
+      <soap12:address location="http://localhost/MQService/MQWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MQWebServiceHttpGet" binding="tns:MQWebServiceHttpGet">
+      <http:address location="http://localhost/MQService/MQWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MQWebServiceHttpPost" binding="tns:MQWebServiceHttpPost">
+      <http:address location="http://localhost/MQService/MQWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
