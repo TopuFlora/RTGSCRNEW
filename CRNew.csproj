@@ -1,0 +1,791 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DDFF824D-60F5-4BF9-A4EF-D05617AE2F6D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FloraSoft</RootNamespace>
+    <AssemblyName>CRNew</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML">
+      <HintPath>..\..\..\UCBL\VAT_CHALLAN_WORK\FUMS\bin\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>C:\inetpub\wwwroot\CPS - Copy\bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="CR\BBCharge.aspx" />
+    <Content Include="CR\ChargeReports.aspx" />
+    <Content Include="CR\Content\bootstrap.css" />
+    <Content Include="CR\Content\bootstrap.min.css" />
+    <Content Include="CR\Content\font-awesome\font-awesome.css" />
+    <Content Include="CR\Content\GridviewScroll.css" />
+    <Content Include="CR\Content\Site.css" />
+    <Content Include="CR\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="CR\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="CR\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="CR\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="CR\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="CR\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="CR\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="CR\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="CR\Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="CR\Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="CR\Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="CR\Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="CR\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="CR\Content\themes\base\jquery-ui.css" />
+    <Content Include="CR\Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="CR\Content\themes\base\jquery.ui.all.css" />
+    <Content Include="CR\Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="CR\Content\themes\base\jquery.ui.base.css" />
+    <Content Include="CR\Content\themes\base\jquery.ui.button.css" />
+    <Content Include="CR\Content\themes\base\jquery.ui.core.css" />
+    <Content Include="CR\Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="CR\Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="CR\Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="CR\Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="CR\Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="CR\Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="CR\Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="CR\Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="CR\Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="CR\Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="CR\Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="CR\Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="CR\Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="CR\Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="CR\Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="CR\Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="CR\Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="CR\Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="CR\Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="CR\Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="CR\Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="CR\Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="CR\Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="CR\Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="CR\Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="CR\Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="CR\Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="CR\Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="CR\Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="CR\Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="CR\Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="CR\Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="CR\Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="CR\Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="CR\Default.aspx" />
+    <Content Include="CR\FileUpload.aspx" />
+    <Content Include="CR\Images\accent.png" />
+    <Content Include="CR\Images\arrowhl.png" />
+    <Content Include="CR\Images\arrowhr.png" />
+    <Content Include="CR\Images\arrowvb.png" />
+    <Content Include="CR\Images\arrowvt.png" />
+    <Content Include="CR\Images\BACHChargeLogin.gif" />
+    <Content Include="CR\Images\bg_header_grey.gif" />
+    <Content Include="CR\Images\bullet.png" />
+    <Content Include="CR\Images\calender.jpg" />
+    <Content Include="CR\Images\DefaultAMIconHover.gif" />
+    <Content Include="CR\Images\DefaultAMIconNormal.gif" />
+    <Content Include="CR\Images\DefaultBIIconHover.gif" />
+    <Content Include="CR\Images\DefaultBIIconNormal.gif" />
+    <Content Include="CR\Images\DefaultEFIconHover.gif" />
+    <Content Include="CR\Images\DefaultEFIconNormal.gif" />
+    <Content Include="CR\Images\DefaultFAIconHover.gif" />
+    <Content Include="CR\Images\DefaultFAIconNormal.gif" />
+    <Content Include="CR\Images\DefaultFMIconHover.gif" />
+    <Content Include="CR\Images\DefaultFMIconNormal.gif" />
+    <Content Include="CR\Images\DefaultLAPIconHoverl.gif" />
+    <Content Include="CR\Images\DefaultLAPIconNormal.gif" />
+    <Content Include="CR\Images\DefaultLMIconlHover.gif" />
+    <Content Include="CR\Images\DefaultLMIconlNormal.gif" />
+    <Content Include="CR\Images\DefaultMSIconHover.gif" />
+    <Content Include="CR\Images\DefaultMSIconlNormal.gif" />
+    <Content Include="CR\Images\DefaultPASIconHover.gif" />
+    <Content Include="CR\Images\DefaultPASIconNormal.gif" />
+    <Content Include="CR\Images\DefaultPEAIconHover.gif" />
+    <Content Include="CR\Images\DefaultPEAIconNormal.gif" />
+    <Content Include="CR\Images\DefaultPETIconHover.gif" />
+    <Content Include="CR\Images\DefaultPETIconNormal.gif" />
+    <Content Include="CR\Images\DefaultPFIconHover.gif" />
+    <Content Include="CR\Images\DefaultPFIconNormal.gif" />
+    <Content Include="CR\Images\DefaultPHTIconHover.gif" />
+    <Content Include="CR\Images\DefaultPHTIconNormal.gif" />
+    <Content Include="CR\Images\DefaultPLDIIconHover.gif" />
+    <Content Include="CR\Images\DefaultPLDIIconNormal.gif" />
+    <Content Include="CR\Images\DefaultPMMIconHover.gif" />
+    <Content Include="CR\Images\DefaultPMMIconNormal.gif" />
+    <Content Include="CR\Images\DefaultPRIconHover.gif" />
+    <Content Include="CR\Images\DefaultPRIconNormal.gif" />
+    <Content Include="CR\Images\DefaultPSaIconlHover.gif" />
+    <Content Include="CR\Images\DefaultPSaIconlNormal.gif" />
+    <Content Include="CR\Images\DefaultPSDIIconHover.gif" />
+    <Content Include="CR\Images\DefaultPSDIIconNormal.gif" />
+    <Content Include="CR\Images\DefaultPSIconHover.gif" />
+    <Content Include="CR\Images\DefaultPSIconNormal.gif" />
+    <Content Include="CR\Images\DefaultPTIconHover.gif" />
+    <Content Include="CR\Images\DefaultPTIconNormal.gif" />
+    <Content Include="CR\Images\DefaultPTPIIconHover.gif" />
+    <Content Include="CR\Images\DefaultPTPIIconNormal.gif" />
+    <Content Include="CR\Images\DefaultPUDIconHover.gif" />
+    <Content Include="CR\Images\DefaultPUDIconNormal.gif" />
+    <Content Include="CR\Images\DefaultSMIconlHover.gif" />
+    <Content Include="CR\Images\DefaultSMIconNormal.gif" />
+    <Content Include="CR\Images\DefaultVMIconHover.gif" />
+    <Content Include="CR\Images\DefaultVMIconNormal.gif" />
+    <Content Include="CR\Images\delete.jpg" />
+    <Content Include="CR\Images\edit.jpg" />
+    <Content Include="CR\Images\excel.jpg" />
+    <Content Include="CR\Images\header.png" />
+    <Content Include="CR\Images\HeaderBACHChargeModule.gif" />
+    <Content Include="CR\Images\heroAccent.png" />
+    <Content Include="CR\Images\hsbc-logo.gif" />
+    <Content Include="CR\Images\HSBC.gif" />
+    <Content Include="CR\Images\hsbc.jpg" />
+    <Content Include="CR\Images\images.jpg" />
+    <Content Include="CR\Images\InitialImage.png" />
+    <Content Include="CR\Images\MainBodyBack.png" />
+    <Content Include="CR\Images\MainManuImage.png" />
+    <Content Include="CR\Images\manubakground.png" />
+    <Content Include="CR\Images\name-apps-pay.png" />
+    <Content Include="CR\Images\name-apps-validation.png" />
+    <Content Include="CR\Images\name-apps.png" />
+    <Content Include="CR\Images\orderedList0.png" />
+    <Content Include="CR\Images\orderedList1.png" />
+    <Content Include="CR\Images\orderedList2.png" />
+    <Content Include="CR\Images\orderedList3.png" />
+    <Content Include="CR\Images\orderedList4.png" />
+    <Content Include="CR\Images\orderedList5.png" />
+    <Content Include="CR\Images\orderedList6.png" />
+    <Content Include="CR\Images\orderedList7.png" />
+    <Content Include="CR\Images\orderedList8.png" />
+    <Content Include="CR\Images\orderedList9.png" />
+    <Content Include="CR\Images\redline.jpg" />
+    <Content Include="CR\Images\redlinetop.jpg" />
+    <Content Include="CR\Images\reportview.jpg" />
+    <Content Include="CR\Images\searchicon50_46.png" />
+    <Content Include="CR\Images\SelectedButton.png" />
+    <Content Include="CR\Images\top-banner.png" />
+    <Content Include="CR\Images\top-menu-bg.png" />
+    <Content Include="CR\LogOut.aspx" />
+    <Content Include="CR\Scripts\bootstrap.min.js" />
+    <Content Include="CR\Scripts\DatePicker\bootstrap-datepicker.js" />
+    <Content Include="CR\Scripts\gridviewScroll.min.js" />
+    <Content Include="CR\Scripts\html5.js" />
+    <Content Include="CR\Scripts\jquery-1.10.2.min.js" />
+    <Content Include="CR\Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="CR\Scripts\jquery-1.4.1.js" />
+    <Content Include="CR\Scripts\jquery-1.4.1.min.js" />
+    <Content Include="CR\Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="CR\Scripts\jquery-1.8.2.js" />
+    <Content Include="CR\Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="CR\Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="CR\Scripts\jquery-ui.min.js" />
+    <Content Include="CR\Scripts\modernizr-2.6.2.js" />
+    <Content Include="CR\Scripts\respond.js" />
+    <Content Include="CR\Scripts\_references.js" />
+    <Content Include="CR\Search.aspx" />
+    <Content Include="CR\SpecialCharge.aspx" />
+    <Content Include="CR\StandardCharge.aspx" />
+    <Content Include="CR\UseHistory.aspx" />
+    <Content Include="CR\WaivedCharge.aspx" />
+    <Content Include="CR\GenerateFlatFile.aspx" />
+    <Content Include="GenerateFlatFile.aspx" />
+    <Content Include="Images\ABCBankLogin.gif" />
+    <Content Include="Images\Ack_01.gif" />
+    <Content Include="Images\Ack_02.gif" />
+    <Content Include="Images\Ack_03.gif" />
+    <Content Include="Images\arrow.gif" />
+    <Content Include="Images\BACPSHeader.gif" />
+    <Content Include="Images\Bank logo\Exim Bank\EXIM BANK LTD..gif" />
+    <Content Include="Images\Bank logo\First Security\BankLogo.gif" />
+    <Content Include="Images\Bank logo\HSBC\HSBC.gif" />
+    <Content Include="Images\Bank logo\HSBC\HSBC.JPG" />
+    <Content Include="Images\Bank logo\Krishi Bank\BankLogo.gif" />
+    <Content Include="Images\Bank logo\Pubali Bank\BankLogo.gif" />
+    <Content Include="Images\Bank logo\Rakub\BankLogo.gif" />
+    <Content Include="Images\BankLogo.gif" />
+    <Content Include="Images\BEFTNHeader.jpg" />
+    <Content Include="Images\bg_2.png" />
+    <Content Include="Images\Branch\ChangePasswordF.gif" />
+    <Content Include="Images\Branch\ChangePasswordFOn.gif" />
+    <Content Include="Images\Branch\HUBAcceptReject.gif" />
+    <Content Include="Images\Branch\HUBAcceptRejectOn.gif" />
+    <Content Include="Images\Branch\HUBExceptionReport.gif" />
+    <Content Include="Images\Branch\HUBExceptionReportOn.gif" />
+    <Content Include="Images\Branch\HUBOREReport.gif" />
+    <Content Include="Images\Branch\HUBOREReportOn.gif" />
+    <Content Include="Images\Branch\HUBReport.gif" />
+    <Content Include="Images\Branch\HUBReportOn.gif" />
+    <Content Include="Images\Branch\InwardCheckReport.gif" />
+    <Content Include="Images\Branch\InwardCheckReportOn.gif" />
+    <Content Include="Images\Branch\InwardList.gif" />
+    <Content Include="Images\Branch\InwardListOn.gif" />
+    <Content Include="Images\Branch\ManualInward.gif" />
+    <Content Include="Images\Branch\ManualInwardOn.gif" />
+    <Content Include="Images\Branch\MyMessages.gif" />
+    <Content Include="Images\Branch\MyMessagesOn.gif" />
+    <Content Include="Images\Branch\OutwardBatch.gif" />
+    <Content Include="Images\Branch\OutwardBatchOn.gif" />
+    <Content Include="Images\Branch\OutwardList.gif" />
+    <Content Include="Images\Branch\OutwardListOn.gif" />
+    <Content Include="Images\Branch\PDFReader.gif" />
+    <Content Include="Images\Branch\PDFReaderOn.gif" />
+    <Content Include="Images\Branch\Report.gif" />
+    <Content Include="Images\Branch\ReportOn.gif" />
+    <Content Include="Images\Branch\Requisition.gif" />
+    <Content Include="Images\Branch\RequisitionOn.gif" />
+    <Content Include="Images\Branch\Search.gif" />
+    <Content Include="Images\Branch\SearchOn.gif" />
+    <Content Include="Images\Branch\SettlementReport.gif" />
+    <Content Include="Images\Branch\SettlementReportOn.gif" />
+    <Content Include="Images\Branch\SignOutF.gif" />
+    <Content Include="Images\Branch\SignOutFOn.gif" />
+    <Content Include="Images\Button1.jpg" />
+    <Content Include="Images\Button2.jpg" />
+    <Content Include="Images\Button4.jpg" />
+    <Content Include="Images\Button5.jpg" />
+    <Content Include="Images\buttonprint.jpg" />
+    <Content Include="Images\buttonprint1.gif" />
+    <Content Include="Images\cbs1.jpg" />
+    <Content Include="Images\ChangePassword.gif" />
+    <Content Include="Images\Check.jpg" />
+    <Content Include="Images\CheckRed.jpg" />
+    <Content Include="Images\delete.gif" />
+    <Content Include="Images\ErrorFolder.gif" />
+    <Content Include="Images\Excel.jpg" />
+    <Content Include="Images\fire.gif" />
+    <Content Include="Images\Folder.gif" />
+    <Content Include="Images\HSBC.gif" />
+    <Content Include="Images\IRE.gif" />
+    <Content Include="Images\IRE_01.gif" />
+    <Content Include="Images\Login.gif" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\ManualInward.jpg" />
+    <Content Include="Images\monitor_01.gif" />
+    <Content Include="Images\monitor_05.gif" />
+    <Content Include="Images\Msg.gif" />
+    <Content Include="Images\ORE.gif" />
+    <Content Include="Images\ORE_01.gif" />
+    <Content Include="Images\PDFIcon.gif" />
+    <Content Include="Images\Report_01.gif" />
+    <Content Include="Images\Report_02.gif" />
+    <Content Include="Images\SampleButton.jpg" />
+    <Content Include="Images\Search.gif" />
+    <Content Include="Images\SearchOn.gif" />
+    <Content Include="Images\Search_01.gif" />
+    <Content Include="Images\Search_02.gif" />
+    <Content Include="Images\Signout.gif" />
+    <Content Include="Images\Signout_03.gif" />
+    <Content Include="Images\Sync.gif" />
+    <Content Include="Images\Sync_01_er.gif" />
+    <Content Include="Images\Sync_er.gif" />
+    <Content Include="Images\thermometer.gif" />
+    <Content Include="Images\UserM.gif" />
+    <Content Include="Includes\bootstrap.min.css" />
+    <Content Include="Includes\Site.css" />
+    <Content Include="Includes\sitec.css" />
+    <Content Include="Login.aspx" />
+    <Content Include="LogOut.aspx" />
+    <Content Include="Modules\AdminButtons.ascx" />
+    <Content Include="Modules\AdminCheckerHeader.ascx" />
+    <Content Include="Modules\AdminHeader.ascx" />
+    <Content Include="Modules\AdminLinks.ascx" />
+    <Content Include="Modules\AdminMakerCheckerHeader.ascx" />
+    <Content Include="Modules\AdminReportViewer.ascx" />
+    <Content Include="Modules\BankSettlement.ascx" />
+    <Content Include="Modules\BranchApproval.ascx" />
+    <Content Include="Modules\BranchHeader.ascx" />
+    <Content Include="Modules\BranchSettlement.ascx" />
+    <Content Include="Modules\CommonHeader.ascx" />
+    <Content Include="Modules\ErrorFolder.ascx" />
+    <Content Include="Modules\ICEBranchStatus.ascx" />
+    <Content Include="Modules\ICECheckStatus.ascx" />
+    <Content Include="Modules\ICEQueueList.ascx" />
+    <Content Include="Modules\ICERejectedStatus.ascx" />
+    <Content Include="Modules\ICEZoneStatus.ascx" />
+    <Content Include="Modules\InwardStatusTree.ascx" />
+    <Content Include="Modules\OCEBatchTree.ascx" />
+    <Content Include="Modules\OCEBranchStatus.ascx" />
+    <Content Include="Modules\OtherButtons.ascx" />
+    <Content Include="Modules\OutwardAckCount.ascx" />
+    <Content Include="Modules\PBMMismatch.ascx" />
+    <Content Include="Modules\RunCount.ascx" />
+    <Content Include="SelectRole.aspx" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Web References\MQService\MQWebService.disco" />
+    <Content Include="Web References\PBMServer\Service1.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CR\BBCharge.aspx.cs">
+      <DependentUpon>BBCharge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CR\BBCharge.aspx.designer.cs">
+      <DependentUpon>BBCharge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CR\ChargeReports.aspx.cs">
+      <DependentUpon>ChargeReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CR\ChargeReports.aspx.designer.cs">
+      <DependentUpon>ChargeReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CR\DAL\AppVariables.cs" />
+    <Compile Include="CR\DAL\BBChargeDB.cs" />
+    <Compile Include="CR\DAL\OutwardDB.cs" />
+    <Compile Include="CR\DAL\ReportDB.cs" />
+    <Compile Include="CR\DAL\SearchDB.cs" />
+    <Compile Include="CR\DAL\SpecialChargeDB.cs" />
+    <Compile Include="CR\DAL\StandardChargeDB.cs" />
+    <Compile Include="CR\DAL\WaivedChargeDB.cs" />
+    <Compile Include="CR\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CR\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CR\FileUpload.aspx.cs">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CR\FileUpload.aspx.designer.cs">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CR\LogOut.aspx.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CR\LogOut.aspx.designer.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CR\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CR\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CR\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CR\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CR\SpecialCharge.aspx.cs">
+      <DependentUpon>SpecialCharge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CR\SpecialCharge.aspx.designer.cs">
+      <DependentUpon>SpecialCharge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CR\StandardCharge.aspx.cs">
+      <DependentUpon>StandardCharge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CR\StandardCharge.aspx.designer.cs">
+      <DependentUpon>StandardCharge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CR\UseHistory.aspx.cs">
+      <DependentUpon>UseHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CR\UseHistory.aspx.designer.cs">
+      <DependentUpon>UseHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CR\WaivedCharge.aspx.cs">
+      <DependentUpon>WaivedCharge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CR\WaivedCharge.aspx.designer.cs">
+      <DependentUpon>WaivedCharge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CR\GenerateFlatFile.aspx.cs">
+      <DependentUpon>GenerateFlatFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CR\GenerateFlatFile.aspx.designer.cs">
+      <DependentUpon>GenerateFlatFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAC\AppVariables.cs" />
+    <Compile Include="DAC\ArchSettlementDB.cs" />
+    <Compile Include="DAC\AuditDB.cs" />
+    <Compile Include="DAC\BanksDB.cs" />
+    <Compile Include="DAC\BranchesDB.cs" />
+    <Compile Include="DAC\ClearingHouseDB.cs" />
+    <Compile Include="DAC\ErrorFileDB.cs" />
+    <Compile Include="DAC\HUBFile.cs" />
+    <Compile Include="DAC\ICEDB.cs" />
+    <Compile Include="DAC\ICEHistoryDB.cs" />
+    <Compile Include="DAC\ICEImageDB.cs" />
+    <Compile Include="DAC\IREDB.cs" />
+    <Compile Include="DAC\MessageDB.cs" />
+    <Compile Include="DAC\OCEAckDB.cs" />
+    <Compile Include="DAC\OCEAckItemDB.cs" />
+    <Compile Include="DAC\OCEBatchDB.cs" />
+    <Compile Include="DAC\OCEDB.cs" />
+    <Compile Include="DAC\OCEImageDB.cs" />
+    <Compile Include="DAC\OREDB.cs" />
+    <Compile Include="DAC\PBMDB.cs" />
+    <Compile Include="DAC\PBMOCEDB.cs" />
+    <Compile Include="DAC\PBMOREDB.cs" />
+    <Compile Include="DAC\QueueDB.cs" />
+    <Compile Include="DAC\ReturnReasonDB.cs" />
+    <Compile Include="DAC\RoleDB.cs" />
+    <Compile Include="DAC\RunDB.cs" />
+    <Compile Include="DAC\SettingsDB.cs" />
+    <Compile Include="DAC\SettlementDB.cs" />
+    <Compile Include="DAC\StatusDB.cs" />
+    <Compile Include="DAC\UserDB.cs" />
+    <Compile Include="DAC\UtilityDB.cs" />
+    <Compile Include="DAC\ZonesDB.cs" />
+    <Compile Include="GenerateFlatFile.aspx.cs">
+      <DependentUpon>GenerateFlatFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GenerateFlatFile.aspx.designer.cs">
+      <DependentUpon>GenerateFlatFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogOut.aspx.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogOut.aspx.designer.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AdminButtons.ascx.cs">
+      <DependentUpon>AdminButtons.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\AdminButtons.ascx.designer.cs">
+      <DependentUpon>AdminButtons.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AdminCheckerHeader.ascx.cs">
+      <DependentUpon>AdminCheckerHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\AdminCheckerHeader.ascx.designer.cs">
+      <DependentUpon>AdminCheckerHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AdminHeader.ascx.cs">
+      <DependentUpon>AdminHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\AdminMakerCheckerHeader.ascx.cs">
+      <DependentUpon>AdminMakerCheckerHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\AdminMakerCheckerHeader.ascx.designer.cs">
+      <DependentUpon>AdminMakerCheckerHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AdminReportViewer.ascx.cs">
+      <DependentUpon>AdminReportViewer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\AdminReportViewer.ascx.designer.cs">
+      <DependentUpon>AdminReportViewer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BankSettlement.ascx.cs">
+      <DependentUpon>BankSettlement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BankSettlement.ascx.designer.cs">
+      <DependentUpon>BankSettlement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BranchApproval.ascx.cs">
+      <DependentUpon>BranchApproval.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BranchApproval.ascx.designer.cs">
+      <DependentUpon>BranchApproval.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BranchHeader.ascx.cs">
+      <DependentUpon>BranchHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BranchHeader.ascx.designer.cs">
+      <DependentUpon>BranchHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\BranchSettlement.ascx.cs">
+      <DependentUpon>BranchSettlement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\BranchSettlement.ascx.designer.cs">
+      <DependentUpon>BranchSettlement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CommonHeader.ascx.cs">
+      <DependentUpon>CommonHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\CommonHeader.ascx.designer.cs">
+      <DependentUpon>CommonHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ErrorFolder.ascx.cs">
+      <DependentUpon>ErrorFolder.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ErrorFolder.ascx.designer.cs">
+      <DependentUpon>ErrorFolder.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ICEBranchStatus.ascx.cs">
+      <DependentUpon>ICEBranchStatus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ICEBranchStatus.ascx.designer.cs">
+      <DependentUpon>ICEBranchStatus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ICECheckStatus.ascx.cs">
+      <DependentUpon>ICECheckStatus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ICECheckStatus.ascx.designer.cs">
+      <DependentUpon>ICECheckStatus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ICEQueueList.ascx.cs">
+      <DependentUpon>ICEQueueList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ICEQueueList.ascx.designer.cs">
+      <DependentUpon>ICEQueueList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ICERejectedStatus.ascx.cs">
+      <DependentUpon>ICERejectedStatus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ICERejectedStatus.ascx.designer.cs">
+      <DependentUpon>ICERejectedStatus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ICEZoneStatus.ascx.cs">
+      <DependentUpon>ICEZoneStatus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ICEZoneStatus.ascx.designer.cs">
+      <DependentUpon>ICEZoneStatus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\InwardStatusTree.ascx.cs">
+      <DependentUpon>InwardStatusTree.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\InwardStatusTree.ascx.designer.cs">
+      <DependentUpon>InwardStatusTree.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\OCEBatchTree.ascx.cs">
+      <DependentUpon>OCEBatchTree.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\OCEBatchTree.ascx.designer.cs">
+      <DependentUpon>OCEBatchTree.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\OCEBranchStatus.ascx.cs">
+      <DependentUpon>OCEBranchStatus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\OCEBranchStatus.ascx.designer.cs">
+      <DependentUpon>OCEBranchStatus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\OutwardAckCount.ascx.cs">
+      <DependentUpon>OutwardAckCount.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\OutwardAckCount.ascx.designer.cs">
+      <DependentUpon>OutwardAckCount.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\PBMMismatch.ascx.cs">
+      <DependentUpon>PBMMismatch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\PBMMismatch.ascx.designer.cs">
+      <DependentUpon>PBMMismatch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\RunCount.ascx.cs">
+      <DependentUpon>RunCount.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\RunCount.ascx.designer.cs">
+      <DependentUpon>RunCount.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs" />
+    <Compile Include="SelectRole.aspx.cs">
+      <DependentUpon>SelectRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SelectRole.aspx.designer.cs">
+      <DependentUpon>SelectRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MQService\Reference.cs" />
+    <Compile Include="Web References\PBMServer\Reference.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Images\Temp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CR\Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Branch\Thumbs.db" />
+    <None Include="Properties\Settings.settings" />
+    <None Include="Web References\MQService\MQWebService.wsdl" />
+    <None Include="Web References\MQService\Reference.map" />
+    <None Include="Web References\PBMServer\Reference.map" />
+    <None Include="Web References\PBMServer\Service1.wsdl" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54803</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
